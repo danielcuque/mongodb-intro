@@ -1,0 +1,13 @@
+use('platzi_store')
+
+db.products.insertMany([
+    {
+        "name": "TV Samsung",
+        "price": 1000,
+    },
+    {
+        "name": "TV LG",
+        "price": 1000,
+    }])
+
+db.products.find({})
