@@ -1,0 +1,31 @@
+use('platzi_store')
+
+// Using equal
+
+// db.inventory.find({
+//     qty: 20
+// })
+
+db.inventory.find({
+    "item.name": 'ab'
+})
+
+// Using not equal
+
+// db.inventory.find({
+//     qty: {
+//         $ne: 20
+//     }
+// })
+
+db.inventory.updateMany({
+    qty: {
+        $ne: 20
+    }
+}, {
+    $inc: {
+        qty: 10
+    }
+})
+
+db.inventory.find()
