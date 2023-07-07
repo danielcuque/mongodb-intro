@@ -1,0 +1,15 @@
+use('platzi_store')
+
+// db.monthlyBudget.find({
+//     spent: {
+//         $gt: 100
+//     }
+// })
+
+// Using $expr
+db.monthlyBudget.find({
+    $expr: {
+        // we can compare fields from the same document
+        $gte: ['$spent', '$budget']
+    }
+})
