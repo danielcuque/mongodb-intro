@@ -1,0 +1,37 @@
+use('platzi_store')
+
+
+// db.inventory.find({
+//     'item.description': {
+//         $regex: /line/
+//     }
+// })
+
+// With /i we can find the word with upper or lower case
+
+// db.inventory.find({
+//     'item.description': {
+//         $regex: /lInE/i,
+//     }
+// })
+
+// With $ we can find the word that ends with the word
+// db.inventory.find({
+//     'item.description': {
+//         $regex: /lInE$/i,
+//     }
+// })
+
+// With ^ we can find the word that starts with the word
+// db.inventory.find({
+//     'item.description': {
+//         $regex: /^single/i,
+//     }
+// })
+
+// With /m we can find the word that starts with the word
+db.inventory.find({
+    'item.description': {
+        $regex: /line/im,
+    }
+})
