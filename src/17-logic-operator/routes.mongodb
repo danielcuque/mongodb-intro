@@ -1,0 +1,25 @@
+use('sample_training')
+
+// db.routes.find({
+//     $or: [
+//         { dst_airport: 'BOT' },
+//         { dst_airport: 'GUA' },
+//     ]
+// }).limit(10)
+
+// db.routes.find({
+//     $and: [
+//         {
+//             airplane: 'E70'
+//         }, {
+//             $or: [
+//                 {
+//                     dst_airport: 'BOG'
+//                 },
+//                 {
+//                     src_airport: 'BOG'
+//                 }
+//             ]
+//         }
+//     ]
+// })
